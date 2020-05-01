@@ -1,26 +1,91 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ButtonFilter from "./components/ButtonFilter";
 
 function App() {
+  const [shapes, setShapes] = useState(shapeButtons);
+  const [colors, setColors] = useState(colorButtons);
+  const [clarity, setClarity] = useState(clarityButtons);
+  const [cuts, setCuts] = useState(cutButtons);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="left">
+        <ButtonFilter
+          setState={setShapes}
+          buttons={shapes}
+          title="Forma"
+          tooltip="Selecciona alguna forma para tu gema."
+        ></ButtonFilter>
+        <ButtonFilter
+          setState={setColors}
+          buttons={colors}
+          title="Color"
+          tooltip="Selecciona algún color para tu gema."
+        ></ButtonFilter>
+        <ButtonFilter
+          setState={setClarity}
+          buttons={clarity}
+          title="Claridad"
+          tooltip="Selecciona alguna claridad para tu gema."
+        ></ButtonFilter>
+      </div>
+      <div className="right">
+        <ButtonFilter
+          setState={setCuts}
+          buttons={cuts}
+          title="Corte"
+          tooltip="Selecciona algun corte para tu gema."
+        ></ButtonFilter>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+const shapeButtons = [
+  { label: "Redondo", src: "Forma/redondo.png" },
+  { label: "Princesa", src: "Forma/princesa.png" },
+  { label: "Esmeralda", src: "Forma/esmeralda.png" },
+  { label: "Ovalo", src: "Forma/ovalo.png" },
+  { label: "Marquesa", src: "Forma/marquesa.png" },
+  { label: "Pera", src: "Forma/pera.png" },
+  { label: "Asscher", src: "Forma/asscher.png" },
+  { label: "Corazon", src: "Forma/corazon.png" },
+  { label: "Cojin", src: "Forma/cojijn.png" },
+  { label: "Baguette", src: "Forma/baguette.png" },
+  { label: "Trillon", src: "Forma/trillon.png" },
+  { label: "Radiante", src: "Forma/radiante.png" },
+];
+
+const colorButtons = [
+  { label: "Transparente", src: "Color/incoloro.png" },
+  { label: "Casi Incoloro", src: "Color/casi-incoloro.png" },
+  { label: "Ligeramente amarillo", src: "Color/ligeramente-amarillo.png" },
+  { label: "Amarillo claro", src: "Color/amarillo-claro.png" },
+];
+
+const clarityButtons = [
+  { label: "Perfecta", src: "Claridad/perfecta.png" },
+  {
+    label: "Imperfecciones no visibles",
+    src: "Claridad/imperfecciones-no-visibles.png",
+  },
+  {
+    label: "Imperfecciones visibles a 10x",
+    src: "Claridad/imperfecciones-10x.png",
+  },
+  {
+    label: "Imperfecciones visibles a simple vista",
+    src: "Claridad/imperfecciones-simple-vista.png",
+  },
+];
+
+const cutButtons = [
+  { label: "Excelente (Máximo brillo)", src: "Corte/excelente.png" },
+  { label: "Muy bueno (Muy brillante)", src: "Corte/muy-bueno.png" },
+  { label: "Bueno (Brillante)", src: "Corte/bueno.png" },
+  { label: "Regular (Poco brillante)", src: "Corte/regular.png" },
+];

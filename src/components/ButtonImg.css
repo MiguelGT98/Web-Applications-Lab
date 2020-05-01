@@ -1,0 +1,29 @@
+.button-img {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 100px;
+  min-height: 80px;
+  outline: 1px solid #1824ac;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.button-img.selected {
+  background-color: rgb(243, 243, 251);
+}
+
+.button-img:hover {
+  background-color: rgb(243, 243, 251);
+  cursor: pointer;
+}
+
+.button-img p {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+}

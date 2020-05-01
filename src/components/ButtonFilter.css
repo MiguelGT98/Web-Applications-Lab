@@ -1,0 +1,48 @@
+.button-filter {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.button-filter h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.button-filter h3 svg {
+  margin-left: 5px;
+}
+
+.button-filter h3 .tooltip-container {
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.button-filter h3 .tooltip-container .tooltip {
+  display: none;
+  margin-left: 10px;
+  padding: 4px 8px;
+  height: 36px;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  padding: 0px 16px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.button-filter h3 .tooltip-container:hover .tooltip {
+  display: flex;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
