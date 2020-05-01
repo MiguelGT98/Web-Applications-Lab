@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import ButtonFilter from "./components/ButtonFilter";
+import RangeFilter from "./components/RangeFilter";
 
 function App() {
   const [shapes, setShapes] = useState(shapeButtons);
   const [colors, setColors] = useState(colorButtons);
   const [clarity, setClarity] = useState(clarityButtons);
   const [cuts, setCuts] = useState(cutButtons);
+  const [caratValue, setCaratValue] = useState([0, 30]);
+  const [priceValue, setPriceValue] = useState([200, 5000000]);
 
   return (
     <div className="App">
@@ -38,6 +41,25 @@ function App() {
           title="Corte"
           tooltip="Selecciona algun corte para tu gema."
         ></ButtonFilter>
+        <RangeFilter
+          imgFrom="Quilataje/pequeno.png"
+          imgTo="Quilataje/grande.png"
+          title="Quilataje"
+          tooltip="Selecciona el rango de quilataje para tu gema."
+          from={0}
+          to={30}
+          range={caratValue}
+          setRange={setCaratValue}
+        ></RangeFilter>
+        <RangeFilter
+          title="Precio"
+          tooltip="Selecciona el rango de precio para tu gema."
+          from={200}
+          to={5000000}
+          range={priceValue}
+          setRange={setPriceValue}
+          step={100}
+        ></RangeFilter>
       </div>
     </div>
   );

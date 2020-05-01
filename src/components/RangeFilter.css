@@ -1,0 +1,59 @@
+.range-filter h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.range-filter h3 svg {
+  margin-left: 5px;
+}
+
+.range-filter h3 .tooltip-container {
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.range-filter h3 .tooltip-container .tooltip {
+  display: none;
+  margin-left: 10px;
+  padding: 4px 8px;
+  height: 36px;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  padding: 0px 16px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.range-filter h3 .tooltip-container:hover .tooltip {
+  display: flex;
+}
+
+.range-filter .opposite {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-filter > * {
+  margin-bottom: 10px;
+}
+
+.rc-slider-handle {
+  border: solid 2px #1824ac !important;
+}
+
+.rc-slider-track {
+  background-color: #1824ac !important;
+}
+
+.rc-slider-handle-dragging {
+  box-shadow: 0 0 0 5px #1824ac !important;
+}
