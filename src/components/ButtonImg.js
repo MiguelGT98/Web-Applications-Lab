@@ -10,7 +10,7 @@ const ButtonImg = ({ src, label, onSelect, selected }) => {
         onSelect(label);
       }}
     >
-      <img src={require(`../static/images/${src}`)}></img>
+      <img src={require(`../static/images/${src}`)} alt="Button example"></img>
       <p>{label}</p>
     </div>
   );

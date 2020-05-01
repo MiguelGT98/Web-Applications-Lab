@@ -26,8 +26,8 @@ const ButtonFilter = ({ title, buttons, tooltip, setState }) => {
       </h3>
       <div className="button-container">
         {buttons &&
-          buttons.map((button) => (
-            <ButtonImg {...button} onSelect={onSelect}></ButtonImg>
+          buttons.map((button, index) => (
+            <ButtonImg {...button} onSelect={onSelect} key={index}></ButtonImg>
           ))}
       </div>
     </div>

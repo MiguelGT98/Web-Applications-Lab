@@ -1,5 +1,5 @@
 import React from "react";
-import Slider, { Range } from "rc-slider";
+import { Range } from "rc-slider";
 
 import MdHelpCircle from "react-ionicons/lib/MdHelpCircle";
 
@@ -28,8 +28,11 @@ const RangeFilter = ({
       </h3>
       {imgFrom && imgTo && (
         <div className="range-images opposite">
-          <img src={require(`../static/images/${imgFrom}`)}></img>
-          <img src={require(`../static/images/${imgTo}`)}></img>
+          <img
+            src={require(`../static/images/${imgFrom}`)}
+            alt="Small oneƒ"
+          ></img>
+          <img src={require(`../static/images/${imgTo}`)} alt="Big one"></img>
         </div>
       )}
       <Range

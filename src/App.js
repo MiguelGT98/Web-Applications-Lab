@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import ButtonFilter from "./components/ButtonFilter";
 import RangeFilter from "./components/RangeFilter";
