@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import ButtonFilter from "./components/ButtonFilter";
 import RangeFilter from "./components/RangeFilter";
+import Button from "./components/Button";
 
 function App() {
   const [shapes, setShapes] = useState(shapeButtons);
@@ -11,6 +12,28 @@ function App() {
   const [cuts, setCuts] = useState(cutButtons);
   const [caratValue, setCaratValue] = useState([0, 30]);
   const [priceValue, setPriceValue] = useState([200, 5000000]);
+
+  const resetState = () => {
+    setShapes(shapeButtons);
+    setColors(colorButtons);
+    setClarity(clarityButtons);
+    setCuts(cutButtons);
+    setCaratValue([0, 30]);
+    setPriceValue([200, 5000000]);
+  };
+
+  const printState = () => {
+    console.log({
+      shapes: filterSelected(shapes) || {},
+      colors: filterSelected(colors) || {},
+      clarity: filterSelected(clarity) || {},
+      cuts: filterSelected(cuts) || {},
+      caratValue,
+      priceValue,
+    });
+  };
+
+  const filterSelected = (array) => array.filter((el) => el.selected)[0];
 
   return (
     <div className="App">
@@ -60,6 +83,18 @@ function App() {
           setRange={setPriceValue}
           step={100}
         ></RangeFilter>
+      </div>
+      <div className="full-width">
+        <Button
+          label="Buscar"
+          onClick={printState}
+          className="bg-blue"
+        ></Button>
+        <Button
+          label="Limpiar filtros"
+          onClick={resetState}
+          className="bg-white"
+        ></Button>
       </div>
     </div>
   );

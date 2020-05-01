@@ -1,0 +1,32 @@
+.button {
+  height: 48px;
+  border: 0;
+  text-transform: uppercase;
+  margin-right: 20px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 300px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button.bg-blue {
+  background-color: #1724ab;
+  color: white;
+}
+
+.button.bg-white {
+  background-color: white;
+  color: #1724ab;
+  border: 1px solid #1724ab;
+}
+
+@media only screen and (max-width: 800px) {
+  .button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

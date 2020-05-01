@@ -1,4 +1,9 @@
 .App {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  margin: 30px auto;
 }

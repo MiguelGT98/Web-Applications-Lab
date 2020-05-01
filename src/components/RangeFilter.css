@@ -47,13 +47,13 @@
 }
 
 .rc-slider-handle {
-  border: solid 2px #1824ac !important;
+  border: solid 2px #1724ab !important;
 }
 
 .rc-slider-track {
-  background-color: #1824ac !important;
+  background-color: #1724ab !important;
 }
 
 .rc-slider-handle-dragging {
-  box-shadow: 0 0 0 5px #1824ac !important;
+  box-shadow: 0 0 0 5px #1724ab !important;
 }
